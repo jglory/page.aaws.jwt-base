@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: aaws-api
+
+security:
+  jwt:
+    access-token:
+      secret-key: ${JWT_SECRET:access-token-secret-key-string-value}
+      issuer: https://api.aaws.page
+    refresh-token:
+      secret-key: ${JWT_SECRET:refresh-token-secret-key-string-value}
+      issuer: https://api.aaws.page
+    web-agents:
+      - Mozilla
+      - Chrome
+      - Safari
+      - Opera
+      - Edge
+      - PostmanRuntime

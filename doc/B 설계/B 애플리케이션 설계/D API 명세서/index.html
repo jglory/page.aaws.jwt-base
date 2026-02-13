@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SwaggerUI" />
+    <title>SwaggerUI</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui.css" />
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@5.11.0/swagger-ui-bundle.js" crossorigin></script>
+<script>
+
+    window.onload = () => {
+        window.ui = SwaggerUIBundle({
+            url: 'swagger.json',
+            dom_id: '#swagger-ui',
+        });
+
+        // MutationObserver 설정
+        const observer = new MutationObserver(content_observer_callback);
+
+        // 텍스트 또는 속성 변경을 감지하도록 옵션 설정
+        observer.observe(
+            document.body,
+            {
+                attributes: true,
+                characterData: true,
+                childList: true,
+                subtree: true
+            }
+        );
+
+        content_sync();
+    };
+
+
+    function content_sync() {
+        let height = Math.max(
+            // document.body.scrollHeight,
+            // document.documentElement.scrollHeight,
+            // document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+            // document.body.clientHeight,
+            // document.documentElement.clientHeight
+        )
+        // console.log([document.body.scrollHeight,
+        //     document.documentElement.scrollHeight,
+        //     document.body.offsetHeight,
+        //     document.documentElement.offsetHeight,
+        //     document.body.clientHeight,
+        //     document.documentElement.clientHeight]);
+
+        window.parent.document.getElementById('content').height = height + 30;
+    }
+
+    function content_observer_callback(mutations) {
+        mutations.forEach(
+            (mutation) => {
+                content_sync();
+            }
+        );
+    }
+
+</script>
+</body>
+</html>
