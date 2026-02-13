@@ -1,0 +1,8 @@
+{
+  "readableLineLength": false,
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "./_files",
+  "newFileLocation": "current",
+  "useMarkdownLinks": false
+}

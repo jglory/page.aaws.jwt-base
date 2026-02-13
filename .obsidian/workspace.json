@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "3f43b30537d92d46",
+    "type": "split",
+    "children": [
+      {
+        "id": "04195bb21c888919",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1d06ed54c8c4406b",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aede537d54002e2a",
+    "type": "split",
+    "children": [
+      {
+        "id": "50673702a676f927",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "afe2876b49481488",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d0dd7e76a2b9f8af",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0a7e5dabdd65f996",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b2024d5d221ddc1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e933b390d331e28",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52d1e96f8604d274",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "B 설계/C 데이터 설계/C 테이블 관계도/XYZSHOP/Goods.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Goods"
+            }
+          },
+          {
+            "id": "37dea8ee06457337",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "B 설계/C 데이터 설계/C 테이블 관계도/XYZSHOP/Goods.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Goods"
+            }
+          },
+          {
+            "id": "1e04ad8e0bc8bd64",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d9aa7707d514c76b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "B 설계/C 데이터 설계/C 테이블 관계도/XYZSHOP/Goods.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Goods"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "vscode-editor:Create Code File": false
+    }
+  },
+  "active": "1d06ed54c8c4406b",
+  "lastOpenFiles": [
+    "target/classes/page/aaws/global/security/config/SwaggerConfig.class",
+    "target/classes/page/aaws/api/v1/health/HealthController.class",
+    "target/classes/page/aaws/api/v1/health",
+    "doc/외부서비스 식별자 목록.md",
+    "doc/소프트웨어 형상 관리.md",
+    "doc/소프트웨어 개발 공정 표준화.md",
+    "doc/서비스코드 목록.md",
+    "doc/문서 이력.md",
+    "doc/리포지토리 목록.md",
+    "doc/가이드/소프트웨어 개발 공정 표준화 소개.md",
+    "doc/가이드/개발공정표준화 가이드 설치.md",
+    "doc/가이드/개발 공정 산출물.md",
+    "doc/가이드/_files/f5caec23464a18600dd527938b7fe420_MD5.jpeg",
+    "doc/가이드/_files/de94fd23e81e53610740e36385b8ed6e_MD5.jpeg",
+    "doc/가이드/_files/d344b4855554cc5762f1d187f8c35aa6_MD5.jpg",
+    "doc/가이드/_files/c2493a10dcb6fdb4ccd0761021075bce_MD5.jpeg",
+    "doc/가이드/_files/c1679990ba187f0cf356c164c5cffdd4_MD5.jpeg",
+    "doc/가이드/_files/ac6521ac7709bb053b80700fcf5cdfbc_MD5.jpeg",
+    "doc/가이드/_files/aaae09c420a7a58c746693e5a775eda0_MD5.jpg",
+    "doc/가이드/_files/aa5df02fcd35695be4cfe8f87e17b49c_MD5.jpg",
+    "doc/가이드/_files/Pasted image 20241213170122.png",
+    "doc/가이드/_files/776928d8e78987699efcc70172e5397c_MD5.png",
+    "doc/가이드/_files",
+    "doc/가이드/5. javadoc.md",
+    "doc/가이드/4. Plantuml.md",
+    "doc/가이드/3. 처리 흐름도 (Sequence Diagram).md",
+    "doc/가이드/2. 클래스 구조도 (Class Diagram).md",
+    "doc/가이드/1. Obsidian.md",
+    "doc/가이드",
+    "doc/_templates/scripts/boot.js",
+    "doc/_templates/scripts",
+    "doc/_templates/CAA. 소프트웨어 처리 흐름도.md",
+    "doc/_templates/BCD. DB 기능 명세서 (DB Stored Procedure).md",
+    "doc/_templates/BCD. DB 기능 명세서 (DB Function).md",
+    "doc/_templates/BCC. 테이블 관계도.md",
+    "doc/_templates/BCB. 테이블 정의서.md",
+    "doc/_templates/BBE. 시스템 처리 흐름도.md",
+    "doc/_templates/BBD. API 명세서.md",
+    "doc/_templates/BBC. 클래스 구조도.md",
+    "doc/_templates/BAB. 시스템 아키텍쳐 구성도.md",
+    "doc/_templates/BAA. 소프트웨어 아키텍쳐 구성도.md",
+    "doc/_templates/ABC. 현행 테이블 관계도.md",
+    "doc/_files/양식",
+    "doc/_files",
+    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/웹 서비스/회원/canvas/XYZ-CAA-000035.canvas",
+    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/API 서비스/회원/canvas/XYZ-CAA-000039.canvas",
+    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/웹 서비스/회원/canvas",
+    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/API 서비스/회원/canvas",
+    "doc/B 설계/C 데이터 설계/C 테이블 관계도/XYZSHOP/canvas/XYZ-BCC-000001.canvas",
+    "doc/B 설계/B 애플리케이션 설계/E 시스템 처리 흐름도/웹 서비스/회원/canvas/XYZ-BBE-000001.canvas",
+    "doc/B 설계/B 애플리케이션 설계/E 시스템 처리 흐름도/API 서비스/회원/canvas/XYZ-BBE-000002.canvas",
+    "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/Controller/canvas/XYZ-BBC-000001.canvas",
+    "doc/B 설계/A 아키텍쳐 설계/B 시스템 아키텍쳐 구성도/canvas/XYZ-BAB-000001.canvas",
+    "doc/B 설계/A 아키텍쳐 설계/A 소프트웨어 아키텍쳐 구성도/canvas/XYZ-BAA-000001.canvas",
+    "doc/A 분석/B 아키텍쳐 분석/C 현행 테이블 관계도/canvas/XYZ-ABC-000001.canvas",
+    "doc/A 분석/B 아키텍쳐 분석/B 현행 시스템 아키텍쳐 구성도/canvas/XYZ-ABB-000001.canvas"
+  ]
+}

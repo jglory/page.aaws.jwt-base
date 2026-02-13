@@ -1,0 +1,153 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "doc/_templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "doc/_templates/scripts",
+  "enable_folder_templates": false,
+  "folder_templates": [
+    {
+      "folder": "A 분석/A 업무 분석/B 보편 언어",
+      "template": "_templates/AAB. 보편 언어.md"
+    },
+    {
+      "folder": "A 분석/A 업무 분석/C 바운디드 컨텍스트 맵",
+      "template": "_templates/AAC. 바운디드 컨텍스트 맵.md"
+    },
+    {
+      "folder": "A 분석/B 아키텍쳐 분석/A 현행 소프트웨어 아키텍쳐 구성도",
+      "template": "_templates/ABA. 현행 소프트웨어 아키텍쳐 구성도.md"
+    },
+    {
+      "folder": "A 분석/B 아키텍쳐 분석/B 현행 시스템 아키텍쳐 구성도",
+      "template": "_templates/ABB. 현행 시스템 아키텍쳐 구성도.md"
+    },
+    {
+      "folder": "A 분석/B 아키텍쳐 분석/C 현행 테이블 관계도",
+      "template": "_templates/ABC. 현행 테이블 관계도.md"
+    },
+    {
+      "folder": "B 설계/A 아키텍쳐 설계/A 소프트웨어 아키텍쳐 구성도",
+      "template": "_templates/BAA. 소프트웨어 아키텍쳐 구성도.md"
+    },
+    {
+      "folder": "B 설계/A 아키텍쳐 설계/B 시스템 아키텍쳐 구성도",
+      "template": "_templates/BAB. 시스템 아키텍쳐 구성도.md"
+    },
+    {
+      "folder": "B 설계/B 애플리케이션 설계/C 클래스 구조도",
+      "template": "_templates/BBC. 클래스 구조도.md"
+    },
+    {
+      "folder": "B 설계/B 애플리케이션 설계/D API 명세서",
+      "template": "_templates/BBD. API 명세서.md"
+    },
+    {
+      "folder": "B 설계/B 애플리케이션 설계/E 시스템 처리 흐름도",
+      "template": "_templates/BBE. 시스템 처리 흐름도.md"
+    },
+    {
+      "folder": "B 설계/C 데이터 설계/B 테이블 정의서",
+      "template": "_templates/BCB. 테이블 정의서.md"
+    },
+    {
+      "folder": "B 설계/C 데이터 설계/C 테이블 관계도",
+      "template": "_templates/BCC. 테이블 관계도.md"
+    },
+    {
+      "folder": "B 설계/C 데이터 설계/D DB 기능 명세서/Oracle/XYZSHOP/Function",
+      "template": "_templates/BCD. DB 기능 명세서 (DB Function).md"
+    },
+    {
+      "folder": "B 설계/C 데이터 설계/D DB 기능 명세서/Oracle/XYZSHOP/Stored Procedure",
+      "template": "_templates/BCD. DB 기능 명세서 (DB Stored Procedure).md"
+    },
+    {
+      "folder": "C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도",
+      "template": "_templates/CAA. 소프트웨어 처리 흐름도.md"
+    },
+    {
+      "folder": "_projects",
+      "template": "_templates/_projects/Backlog.md"
+    }
+  ],
+  "enable_file_templates": true,
+  "file_templates": [
+    {
+      "regex": "^doc\\/A 분석\\/A 업무 분석\\/B 보편 언어",
+      "template": "doc/_templates/AAB. 보편 언어.md"
+    },
+    {
+      "regex": "^doc\\/A 분석\\/A 업무 분석\\/C 바운디드 컨텍스트 맵",
+      "template": "doc/_templates/AAC. 바운디드 컨텍스트 맵.md"
+    },
+    {
+      "regex": "^doc\\/A 분석\\/B 아키텍쳐 분석\\/A 현행 소프트웨어 아키텍쳐 구성도",
+      "template": "doc/_templates/ABA. 현행 소프트웨어 아키텍쳐 구성도.md"
+    },
+    {
+      "regex": "^doc\\/A 분석\\/B 아키텍쳐 분석\\/B 현행 시스템 아키텍쳐 구성도",
+      "template": "doc/_templates/ABB. 현행 시스템 아키텍쳐 구성도.md"
+    },
+    {
+      "regex": "^doc\\/A 분석\\/B 아키텍쳐 분석\\/C 현행 테이블 관계도",
+      "template": "doc/_templates/ABC. 현행 테이블 관계도.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/A 아키텍쳐 설계\\/A 소프트웨어 아키텍쳐 구성도",
+      "template": "doc/_templates/BAA. 소프트웨어 아키텍쳐 구성도.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/A 아키텍쳐 설계\\/B 시스템 아키텍쳐 구성도",
+      "template": "doc/_templates/BAB. 시스템 아키텍쳐 구성도.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/B 애플리케이션 설계\\/C 클래스 구조도",
+      "template": "doc/_templates/BBC. 클래스 구조도.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/B 애플리케이션 설계\\/D API 명세서",
+      "template": "doc/_templates/BBD. API 명세서.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/B 애플리케이션 설계\\/E 시스템 처리 흐름도",
+      "template": "doc/_templates/BBE. 시스템 처리 흐름도.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/C 데이터 설계\\/B 테이블 정의서",
+      "template": "doc/_templates/BCB. 테이블 정의서.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/C 데이터 설계\\/C 테이블 관계도",
+      "template": "doc/_templates/BCC. 테이블 관계도.md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/C 데이터 설계\\/D DB 기능 명세서\\/.+\\/Function",
+      "template": "doc/_templates/BCD. DB 기능 명세서 (DB Function).md"
+    },
+    {
+      "regex": "^doc\\/B 설계\\/C 데이터 설계\\/D DB 기능 명세서\\/.+\\/Stored Procedure",
+      "template": "doc/_templates/BCD. DB 기능 명세서 (DB Stored Procedure).md"
+    },
+    {
+      "regex": "^doc\\/C 구현\\/A 소프트웨어\\/A 소프트웨어 처리 흐름도",
+      "template": "_templates/CAA. 소프트웨어 처리 흐름도.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ]
+}

@@ -1,0 +1,7 @@
+com.lotteimall.itdesignprocess
+com.lotteimall.itdesignprocess.config
+com.lotteimall.itdesignprocess.controller
+com.lotteimall.itdesignprocess.user.dto
+com.lotteimall.itdesignprocess.user.repository
+com.lotteimall.itdesignprocess.user.repository.exception
+com.lotteimall.itdesignprocess.user.service
