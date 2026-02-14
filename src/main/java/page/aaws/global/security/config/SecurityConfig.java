@@ -3,6 +3,7 @@ package page.aaws.global.security.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.oauth2.server.resource.web.BearerTokenResolver;
 import page.aaws.api.v1.auth.dto.LoginRequest;
 import page.aaws.global.security.config.customizer.*;
 import page.aaws.global.security.jwt.*;
@@ -47,7 +48,7 @@ public class SecurityConfig {
     public SecurityFilterChain reissueSecurityFilterChain(
             HttpSecurity http,
             JwtAuthenticationProvider jwtRefreshTokenAuthenticationProvider,
-            @Qualifier("jwtRefreshTokenHttpServletRequestResolver") JwtTokenHttpServletRequestResolver jwtTokenHttpServletRequestResolver,
+            BearerTokenResolver bearerTokenResolver,
             JwtAuthenticationFilterSuccessHandler jwtAuthenticationFilterSuccessHandler,
             JwtAuthenticationFilterFailureHandler jwtAuthenticationFilterFailureHandler
             ) throws Exception {
@@ -61,7 +62,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session.sessionCreationPolicy((SessionCreationPolicy.STATELESS)))
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/api/v1/reissue").authenticated())
-                .addFilterBefore(new JwtReissueAuthenticationFilter("/api/v1/reissue", authenticationManager, jwtTokenHttpServletRequestResolver, jwtAuthenticationFilterSuccessHandler, jwtAuthenticationFilterFailureHandler), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(new JwtReissueAuthenticationFilter("/api/v1/reissue", authenticationManager, bearerTokenResolver, jwtAuthenticationFilterSuccessHandler, jwtAuthenticationFilterFailureHandler), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
@@ -76,7 +77,7 @@ public class SecurityConfig {
             HttpBasicCustomizer httpBasicCustomizer,
             SessionManagementCustomizer sessionManagementCustomizer,
             JwtAuthenticationProvider jwtAccessTokenAuthenticationProvider,
-            @Qualifier("jwtAccessTokenHttpServletRequestResolver") JwtTokenHttpServletRequestResolver jwtTokenHttpServletRequestResolver,
+            BearerTokenResolver bearerTokenResolver,
             JwtAuthenticationFilterSuccessHandler jwtAuthenticationFilterSuccessHandler,
             JwtAuthenticationFilterFailureHandler jwtAuthenticationFilterFailureHandler,
             ExceptionHandlingCustomizer exceptionHandlingCustomizer,
@@ -93,7 +94,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeHttpRequestsCustomizer)
                 .exceptionHandling(exceptionHandlingCustomizer)
                 .addFilterBefore(
-                        new JwtAuthenticationFilter(authenticationManager, jwtTokenHttpServletRequestResolver),
+                        new JwtAuthenticationFilter(authenticationManager, bearerTokenResolver),
                         UsernamePasswordAuthenticationFilter.class
                 )
                 .addFilterBefore(

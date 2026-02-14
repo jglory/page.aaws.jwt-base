@@ -3,6 +3,8 @@ package page.aaws.global.security.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.jsonwebtoken.security.Keys;
+import org.springframework.security.oauth2.server.resource.web.BearerTokenResolver;
+import org.springframework.security.oauth2.server.resource.web.DefaultBearerTokenResolver;
 import page.aaws.global.security.jwt.*;
 
 import lombok.AllArgsConstructor;
@@ -58,14 +60,7 @@ public class JwtConfig {
     }
 
     @Bean
-    @Qualifier("jwtAccessTokenHttpServletRequestResolver")
-    JwtTokenHttpServletRequestResolver jwtAccessTokenHttpServletRequestResolver() {
-        return new JwtAccessTokenHttpServletRequestResolver();
-    }
-
-    @Bean
-    @Qualifier("jwtRefreshTokenHttpServletRequestResolver")
-    JwtTokenHttpServletRequestResolver jwtRefreshTokenHttpServletRequestResolver() {
-        return new JwtRefreshTokenHttpServletRequestResolver();
+    BearerTokenResolver bearerTokenResolver() {
+        return new DefaultBearerTokenResolver();
     }
 }
