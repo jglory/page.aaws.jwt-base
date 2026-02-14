@@ -6,12 +6,7 @@ await tp.user.boot(tp, 'BCD', false);
 | ----- | -------------------- |
 | 관련 문서 |                      |
 | 태그    | #구현 #DB_함수_명세서       |
-
-
-
 <br>
-
-
 
 # {{함수 명}}
 
@@ -39,5 +34,3 @@ await tp.user.boot(tp, 'BCD', false);
 ## 실행 코드
 ```sql
 ```
-
-

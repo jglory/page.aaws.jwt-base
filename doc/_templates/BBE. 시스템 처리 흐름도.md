@@ -9,21 +9,7 @@ await tp.user.boot(tp, 'BBE', true);
 | 업무 구분     | <% tp.user.doc.jobType %>                                                         |
 | 설명        | {{설명}}                                                                            |
 | 태그        | #설계 #시스템_처리_흐름도 #화면설계서_화면코드/항목번호                                                  |
-
-
-
 <br>
-
-
-
-[[<% tp.user.canvas.path %>|캔버스 뷰]]
-
-
-
-<br>
-
-
-
 ```plantuml
 skinparam shadowing true
 
@@ -123,5 +109,3 @@ deactivate WEB
 deactivate USER
 
 ```
-
-

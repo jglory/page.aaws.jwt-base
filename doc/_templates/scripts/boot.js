@@ -75,7 +75,7 @@ class Env {
     }
 }
 
-async function loadModule(tp, code, canvas) {
+async function loadModule(tp, code) {
     if (this.env === undefined) {
         this.env = new Env(tp);
     }

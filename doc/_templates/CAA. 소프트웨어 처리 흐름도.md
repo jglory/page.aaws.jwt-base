@@ -9,21 +9,7 @@ await tp.user.boot(tp, 'CAA', true);
 | 업무 구분     | <% tp.user.doc.jobType %>                                                         |
 | 설명        | {{설명}}                                                                            |
 | 태그        | #구현 #소프트웨어_처리_흐름도`#{{화면설계서(SB) 화면코드}}/{{항목번호}}`                                   |
-
-
-
 <br>
-
-
-
-[[<% tp.user.canvas.path %>|캔버스 뷰]]
-
-
-
-<br>
-
-
-
 ```plantuml
 skinparam shadowing true
 
@@ -107,5 +93,3 @@ activate User
 deactivate User
 
 ```
-
-
