@@ -1,11 +1,11 @@
-package page.aaws.api.v1.auth.dto;
+package page.aaws.global.security.jwt.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 
 @Builder
 @Schema(description = "인증 토큰 응답")
-public record TokenResponse<T>(
+public record JwtTokenResponse<T>(
     @Schema(description = "액세스 토큰", example = "eyJhbGciOiJIUzI1NiJ9...")
     String accessToken,
 
@@ -21,7 +21,7 @@ public record TokenResponse<T>(
     @Schema(description = "추가 정보")
     T additionalInfo
 ) {
-    public static TokenResponse<Void> of(String accessToken, String refreshToken, String scope, String tokenType) {
-        return new TokenResponse<>(accessToken, refreshToken, scope, tokenType, null);
+    public static JwtTokenResponse<Void> of(String accessToken, String refreshToken, String scope, String tokenType) {
+        return new JwtTokenResponse<>(accessToken, refreshToken, scope, tokenType, null);
     }
 }
