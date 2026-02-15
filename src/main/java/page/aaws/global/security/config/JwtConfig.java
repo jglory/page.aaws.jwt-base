@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.oauth2.server.resource.web.BearerTokenResolver;
 import org.springframework.security.oauth2.server.resource.web.DefaultBearerTokenResolver;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
 import page.aaws.global.security.jwt.*;
 
 import lombok.AllArgsConstructor;
@@ -50,12 +53,12 @@ public class JwtConfig {
     }
 
     @Bean
-    JwtAuthenticationFilterFailureHandler jwtAuthenticationFilterFailureHandler(ObjectMapper objectMapper) {
+    AuthenticationFailureHandler authenticationFailureHandler(ObjectMapper objectMapper) {
         return new JwtAuthenticationFilterFailureHandler(objectMapper);
     }
 
     @Bean
-    JwtAuthenticationFilterSuccessHandler jwtAuthenticationFilterSuccessHandler(JwtTokenManager accessTokenManager, JwtTokenManager refreshTokenManager, ObjectMapper objectMapper) {
+    AuthenticationSuccessHandler authenticationSuccessHandler(JwtTokenManager accessTokenManager, JwtTokenManager refreshTokenManager, ObjectMapper objectMapper) {
         return new JwtAuthenticationFilterSuccessHandler(accessTokenManager, refreshTokenManager, objectMapper);
     }
 

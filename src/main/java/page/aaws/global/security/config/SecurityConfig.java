@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.oauth2.server.resource.web.BearerTokenResolver;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import page.aaws.api.v1.auth.dto.LoginRequest;
 import page.aaws.global.security.config.customizer.*;
 import page.aaws.global.security.jwt.*;
@@ -11,7 +13,6 @@ import page.aaws.global.security.jwt.*;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.core.annotation.Order;
 import org.springframework.context.annotation.Bean;
@@ -49,8 +50,8 @@ public class SecurityConfig {
             HttpSecurity http,
             JwtAuthenticationProvider jwtRefreshTokenAuthenticationProvider,
             BearerTokenResolver bearerTokenResolver,
-            JwtAuthenticationFilterSuccessHandler jwtAuthenticationFilterSuccessHandler,
-            JwtAuthenticationFilterFailureHandler jwtAuthenticationFilterFailureHandler
+            AuthenticationSuccessHandler authenticationSuccessHandler,
+            AuthenticationFailureHandler authenticationFailureHandler
             ) throws Exception {
         
         AuthenticationManager authenticationManager = http.getSharedObject(AuthenticationManagerBuilder.class)
@@ -62,7 +63,7 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session.sessionCreationPolicy((SessionCreationPolicy.STATELESS)))
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/api/v1/reissue").authenticated())
-                .addFilterBefore(new JwtReissueAuthenticationFilter("/api/v1/reissue", authenticationManager, bearerTokenResolver, jwtAuthenticationFilterSuccessHandler, jwtAuthenticationFilterFailureHandler), UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(new JwtReissueAuthenticationFilter("/api/v1/reissue", authenticationManager, bearerTokenResolver, authenticationSuccessHandler, authenticationFailureHandler), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
@@ -78,8 +79,8 @@ public class SecurityConfig {
             SessionManagementCustomizer sessionManagementCustomizer,
             JwtAuthenticationProvider jwtAccessTokenAuthenticationProvider,
             BearerTokenResolver bearerTokenResolver,
-            JwtAuthenticationFilterSuccessHandler jwtAuthenticationFilterSuccessHandler,
-            JwtAuthenticationFilterFailureHandler jwtAuthenticationFilterFailureHandler,
+            AuthenticationSuccessHandler authenticationSuccessHandler,
+            AuthenticationFailureHandler authenticationFailureHandler,
             ExceptionHandlingCustomizer exceptionHandlingCustomizer,
             ObjectMapper objectMapper) throws Exception {
         AuthenticationManager authenticationManager = http.getSharedObject(AuthenticationManagerBuilder.class)
@@ -98,7 +99,7 @@ public class SecurityConfig {
                         UsernamePasswordAuthenticationFilter.class
                 )
                 .addFilterBefore(
-                        this.jsonUsernamePasswordAuthenticationFilter(authenticationManager, jwtAuthenticationFilterSuccessHandler, jwtAuthenticationFilterFailureHandler, objectMapper), //this.createJsonUsernamePasswordAuthenticationFilter(authenticationManager),
+                        this.jsonUsernamePasswordAuthenticationFilter(authenticationManager, authenticationSuccessHandler, authenticationFailureHandler, objectMapper), //this.createJsonUsernamePasswordAuthenticationFilter(authenticationManager),
                         UsernamePasswordAuthenticationFilter.class
                 );
         return http.build();
@@ -106,13 +107,13 @@ public class SecurityConfig {
 
     private @NonNull UsernamePasswordAuthenticationFilter jsonUsernamePasswordAuthenticationFilter(
         AuthenticationManager authenticationManager,
-        JwtAuthenticationFilterSuccessHandler jwtAuthenticationFilterSuccessHandler,
-        JwtAuthenticationFilterFailureHandler jwtAuthenticationFilterFailureHandler,
+        AuthenticationSuccessHandler authenticationSuccessHandler,
+        AuthenticationFailureHandler authenticationFailureHandler,
         ObjectMapper objectMapper) {
         JsonUsernamePasswordAuthenticationFilter<LoginRequest> JsonUsernamePasswordAuthenticationFilter = new JsonUsernamePasswordAuthenticationFilter<>(authenticationManager, LoginRequest.class, objectMapper) {};
         JsonUsernamePasswordAuthenticationFilter.setFilterProcessesUrl("/api/v1/login");
-        JsonUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(jwtAuthenticationFilterSuccessHandler);
-        JsonUsernamePasswordAuthenticationFilter.setAuthenticationFailureHandler(jwtAuthenticationFilterFailureHandler);
+        JsonUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(authenticationSuccessHandler);
+        JsonUsernamePasswordAuthenticationFilter.setAuthenticationFailureHandler(authenticationFailureHandler);
         JsonUsernamePasswordAuthenticationFilter.setSecurityContextRepository(new NullSecurityContextRepository());
         return JsonUsernamePasswordAuthenticationFilter;
     }
