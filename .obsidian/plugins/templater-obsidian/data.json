@@ -139,7 +139,7 @@
     },
     {
       "regex": "^doc\\/C 구현\\/A 소프트웨어\\/A 소프트웨어 처리 흐름도",
-      "template": "_templates/CAA. 소프트웨어 처리 흐름도.md"
+      "template": "doc/_templates/CAA. 소프트웨어 처리 흐름도.md"
     }
   ],
   "syntax_highlighting": true,

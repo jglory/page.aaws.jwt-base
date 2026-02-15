@@ -8,6 +8,7 @@ await tp.user.boot(tp, 'BCC', true);
 | 관련 문서  | {{바운디드 컨텍스트 맵 문서 코드}}<br>{{개념 데이터 모델 문서 코드}}<br>{{테이블 정의서 문서 코드}} |
 | 태그     | #설계 #테이블_관계도                                                      |
 <br>
+
 ```plantuml
 
 ' hide the spot

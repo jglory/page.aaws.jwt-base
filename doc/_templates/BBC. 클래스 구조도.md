@@ -7,6 +7,7 @@ await tp.user.boot(tp, 'BBC', true);
 | 관련 문서 | {{개념 데이터 모델 문서 코드}}<br>{{바운디드 컨텍스트 맵 문서 코드}} |
 | 태그    | #설계 #클래스_구조도                                 |
 <br>
+
 ```plantuml
 set namespaceSeparator none
 
