@@ -1,7 +1,6 @@
 package page.aaws.global.security.jwt.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import page.aaws.global.security.jwt.model.JwtTokenResponse;
@@ -31,7 +30,7 @@ public class JwtAuthenticationFilterSuccessHandler implements AuthenticationSucc
     }
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException {
         String accessToken = this.accessTokenManager.createToken((AbstractAuthenticationToken) authentication);
         String refreshToken = this.refreshTokenManager.createToken((AbstractAuthenticationToken) authentication);
 
