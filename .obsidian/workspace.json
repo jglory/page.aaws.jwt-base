@@ -6,15 +6,56 @@
       {
         "id": "04195bb21c888919",
         "type": "tabs",
+        "dimension": 44.612326043737575,
         "children": [
           {
             "id": "1d06ed54c8c4406b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "doc/가이드/2. 클래스 구조도 (Class Diagram).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2. 클래스 구조도 (Class Diagram)"
+            }
+          },
+          {
+            "id": "bca8726484461105",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/클래스 다이어그램.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "클래스 다이어그램"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "bcd577f4b5312370",
+        "type": "tabs",
+        "dimension": 55.38767395626243,
+        "children": [
+          {
+            "id": "1b57723538214d19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/클래스 다이어그램.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "클래스 다이어그램"
             }
           }
         ]
@@ -168,20 +209,44 @@
       "vscode-editor:Create Code File": false
     }
   },
-  "active": "1d06ed54c8c4406b",
+  "active": "bca8726484461105",
   "lastOpenFiles": [
-    "target/classes/page/aaws/global/security/config/SwaggerConfig.class",
-    "target/classes/page/aaws/api/v1/health/HealthController.class",
-    "target/classes/page/aaws/api/v1/health",
+    "doc/_templates/BBC. 클래스 구조도.md",
+    "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/클래스 다이어그램.md",
+    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/Untitled.md",
+    "doc/_templates/AAB. 보편 언어.md",
+    "doc/_templates/AAC. 바운디드 컨텍스트 맵.md",
+    "doc/_templates/ABA. 현행 소프트웨어 아키텍쳐 구성도.md",
+    "doc/_templates/ABB. 현행 시스템 아키텍쳐 구성도.md",
+    "doc/_templates/ABC. 현행 테이블 관계도.md",
+    "doc/_templates/BAA. 소프트웨어 아키텍쳐 구성도.md",
+    "doc/_templates/BAB. 시스템 아키텍쳐 구성도.md",
+    "doc/_templates/BBD. API 명세서.md",
+    "doc/_templates/BBE. 시스템 처리 흐름도.md",
+    "doc/_templates/BCB. 테이블 정의서.md",
+    "doc/_templates/BCC. 테이블 관계도.md",
+    "doc/_templates/BCD. DB 기능 명세서 (DB Function).md",
+    "doc/_templates/BCD. DB 기능 명세서 (DB Stored Procedure).md",
+    "doc/_templates/CAA. 소프트웨어 처리 흐름도.md",
+    "doc/가이드/2. 클래스 구조도 (Class Diagram).md",
+    "doc/C 구현/A 소프트웨어/Untitled.md",
+    "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/Controller/com.xyzshop.api.XyzShopController.md",
+    "target/classes/page/aaws/global/security/jwt/filter/JwtAuthenticationFilterFailureHandler.class",
+    "target/classes/page/aaws/global/security/jwt/filter/JwtAuthenticationFilterSuccessHandler.class",
+    "target/classes/page/aaws/global/security/jwt/model/JwtTokenResponseFactory.class",
+    "src/main/java/page/aaws/global/security/jwt/model/JwtTokenResponseFactory.java",
+    "target/classes/page/aaws/global/security/jwt/model/JwtTokenResponse.class",
+    "target/classes/page/aaws/global/security/jwt/model/JwtTokenResponse$JwtTokenResponseBuilder.class",
+    "target/classes/page/aaws/global/security/jwt/filter/JwtAuthenticationFilterSuccessHandler$TokenResponseFactory.class",
+    "src/main/java/page/aaws/global/security/jwt/model/JwtTokenResponse.java",
+    "src/main/java/page/aaws/global/security/jwt/model/TokenResponse.java",
+    "target/classes/page/aaws/global/security/config/SecurityConfig.class",
+    "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/Untitled 2.md",
+    "doc/_env.md",
+    "doc/B 설계/B 애플리케이션 설계/C 클래스 구조도/Untitled 1.md",
     "doc/외부서비스 식별자 목록.md",
     "doc/소프트웨어 형상 관리.md",
     "doc/소프트웨어 개발 공정 표준화.md",
-    "doc/서비스코드 목록.md",
-    "doc/문서 이력.md",
-    "doc/리포지토리 목록.md",
-    "doc/가이드/소프트웨어 개발 공정 표준화 소개.md",
-    "doc/가이드/개발공정표준화 가이드 설치.md",
-    "doc/가이드/개발 공정 산출물.md",
     "doc/가이드/_files/f5caec23464a18600dd527938b7fe420_MD5.jpeg",
     "doc/가이드/_files/de94fd23e81e53610740e36385b8ed6e_MD5.jpeg",
     "doc/가이드/_files/d344b4855554cc5762f1d187f8c35aa6_MD5.jpg",
@@ -192,32 +257,8 @@
     "doc/가이드/_files/aa5df02fcd35695be4cfe8f87e17b49c_MD5.jpg",
     "doc/가이드/_files/Pasted image 20241213170122.png",
     "doc/가이드/_files/776928d8e78987699efcc70172e5397c_MD5.png",
-    "doc/가이드/_files",
-    "doc/가이드/5. javadoc.md",
-    "doc/가이드/4. Plantuml.md",
-    "doc/가이드/3. 처리 흐름도 (Sequence Diagram).md",
-    "doc/가이드/2. 클래스 구조도 (Class Diagram).md",
-    "doc/가이드/1. Obsidian.md",
-    "doc/가이드",
-    "doc/_templates/scripts/boot.js",
-    "doc/_templates/scripts",
-    "doc/_templates/CAA. 소프트웨어 처리 흐름도.md",
-    "doc/_templates/BCD. DB 기능 명세서 (DB Stored Procedure).md",
-    "doc/_templates/BCD. DB 기능 명세서 (DB Function).md",
-    "doc/_templates/BCC. 테이블 관계도.md",
-    "doc/_templates/BCB. 테이블 정의서.md",
-    "doc/_templates/BBE. 시스템 처리 흐름도.md",
-    "doc/_templates/BBD. API 명세서.md",
-    "doc/_templates/BBC. 클래스 구조도.md",
-    "doc/_templates/BAB. 시스템 아키텍쳐 구성도.md",
-    "doc/_templates/BAA. 소프트웨어 아키텍쳐 구성도.md",
-    "doc/_templates/ABC. 현행 테이블 관계도.md",
-    "doc/_files/양식",
-    "doc/_files",
     "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/웹 서비스/회원/canvas/XYZ-CAA-000035.canvas",
     "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/API 서비스/회원/canvas/XYZ-CAA-000039.canvas",
-    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/웹 서비스/회원/canvas",
-    "doc/C 구현/A 소프트웨어/A 소프트웨어 처리 흐름도/API 서비스/회원/canvas",
     "doc/B 설계/C 데이터 설계/C 테이블 관계도/XYZSHOP/canvas/XYZ-BCC-000001.canvas",
     "doc/B 설계/B 애플리케이션 설계/E 시스템 처리 흐름도/웹 서비스/회원/canvas/XYZ-BBE-000001.canvas",
     "doc/B 설계/B 애플리케이션 설계/E 시스템 처리 흐름도/API 서비스/회원/canvas/XYZ-BBE-000002.canvas",
